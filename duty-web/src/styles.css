@@ -1,0 +1,410 @@
+@import "tailwindcss";
+
+:root {
+  font-family:
+    Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #eef3f8;
+}
+
+.theme-light {
+  --app-bg: #f7f8fb;
+  --app-panel: rgba(255, 255, 255, 0.92);
+  --app-card: #ffffff;
+  --app-header: rgba(255, 255, 255, 0.82);
+  --app-border: #e5e7eb;
+  --app-text: #111827;
+  --app-muted: #64748b;
+  --app-soft: #f1f5f9;
+  --app-control: #ffffff;
+}
+
+.theme-dark {
+  --app-bg: #101827;
+  --app-panel: rgba(17, 24, 39, 0.92);
+  --app-card: #162033;
+  --app-header: rgba(17, 24, 39, 0.86);
+  --app-border: #2b3548;
+  --app-text: #eef2f7;
+  --app-muted: #9aa7b8;
+  --app-soft: #202b3d;
+  --app-control: #172235;
+}
+
+.app-shell {
+  background: var(--app-bg);
+  color: var(--app-text);
+}
+
+.app-panel {
+  background: var(--app-panel);
+}
+
+.app-card {
+  background: var(--app-card);
+}
+
+.app-header {
+  background: var(--app-header);
+}
+
+.app-border {
+  border-color: var(--app-border);
+}
+
+.app-text {
+  color: var(--app-text);
+}
+
+.app-muted {
+  color: var(--app-muted);
+}
+
+.app-soft {
+  background: var(--app-soft);
+  color: var(--app-muted);
+}
+
+.app-row-hover:hover {
+  background: color-mix(in srgb, var(--app-soft) 58%, transparent);
+}
+
+.app-control,
+.app-input {
+  background: var(--app-control);
+  color: var(--app-text);
+}
+
+.app-input::placeholder {
+  color: var(--app-muted);
+}
+
+.duty-day {
+  background: #e0f2fe;
+  color: #0369a1;
+  --tw-ring-color: #7dd3fc;
+}
+
+.duty-evening {
+  background: #fef3c7;
+  color: #b45309;
+  --tw-ring-color: #fcd34d;
+}
+
+.duty-mid {
+  background: #ffedd5;
+  color: #c2410c;
+  --tw-ring-color: #fed7aa;
+}
+
+.duty-night {
+  background: #e0e7ff;
+  color: #4338ca;
+  --tw-ring-color: #a5b4fc;
+}
+
+.duty-charge {
+  background: #f3e8ff;
+  color: #7e22ce;
+  --tw-ring-color: #c084fc;
+}
+
+.duty-acting {
+  background: #cffafe;
+  color: #0e7490;
+  --tw-ring-color: #67e8f9;
+}
+
+.duty-off {
+  background: #dcfce7;
+  color: #047857;
+  --tw-ring-color: #86efac;
+}
+
+.duty-annual {
+  background: #fce7f3;
+  color: #be185d;
+  --tw-ring-color: #f9a8d4;
+}
+
+.theme-dark .duty-day {
+  background: #082f49;
+  color: #7dd3fc;
+  --tw-ring-color: #0e7490;
+}
+
+.theme-dark .duty-evening {
+  background: #422006;
+  color: #facc15;
+  --tw-ring-color: #a16207;
+}
+
+.theme-dark .duty-mid {
+  background: #431407;
+  color: #fb923c;
+  --tw-ring-color: #c2410c;
+}
+
+.theme-dark .duty-night {
+  background: #312e81;
+  color: #a5b4fc;
+  --tw-ring-color: #4f46e5;
+}
+
+.theme-dark .duty-charge {
+  background: #3b0764;
+  color: #d8b4fe;
+  --tw-ring-color: #9333ea;
+}
+
+.theme-dark .duty-acting {
+  background: #083344;
+  color: #67e8f9;
+  --tw-ring-color: #0891b2;
+}
+
+.theme-dark .duty-off {
+  background: #064e3b;
+  color: #6ee7b7;
+  --tw-ring-color: #059669;
+}
+
+.theme-dark .duty-annual {
+  background: #500724;
+  color: #f9a8d4;
+  --tw-ring-color: #db2777;
+}
+
+.duty-text-day {
+  color: #0369a1;
+}
+
+.duty-text-evening {
+  color: #b45309;
+}
+
+.duty-text-mid {
+  color: #c2410c;
+}
+
+.duty-text-night {
+  color: #4338ca;
+}
+
+.duty-text-charge {
+  color: #7e22ce;
+}
+
+.duty-text-acting {
+  color: #0e7490;
+}
+
+.duty-text-off {
+  color: #047857;
+}
+
+.duty-text-annual {
+  color: #be185d;
+}
+
+.theme-dark .duty-text-day {
+  color: #7dd3fc;
+}
+
+.theme-dark .duty-text-evening {
+  color: #facc15;
+}
+
+.theme-dark .duty-text-mid {
+  color: #fb923c;
+}
+
+.theme-dark .duty-text-night {
+  color: #a5b4fc;
+}
+
+.theme-dark .duty-text-charge {
+  color: #d8b4fe;
+}
+
+.theme-dark .duty-text-acting {
+  color: #67e8f9;
+}
+
+.theme-dark .duty-text-off {
+  color: #6ee7b7;
+}
+
+.theme-dark .duty-text-annual {
+  color: #f9a8d4;
+}
+
+.date-today {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.date-saturday {
+  background: #f0f9ff;
+  color: #075985;
+  border-color: #bae6fd;
+}
+
+.date-sunday {
+  background: #fff1f2;
+  color: #9f1239;
+  border-color: #fecdd3;
+}
+
+.date-holiday {
+  background: #dc2626;
+  color: #ffffff;
+  border-color: #991b1b;
+  box-shadow: inset 0 0 0 1px rgba(127, 29, 29, 0.7), 0 8px 18px rgba(220, 38, 38, 0.18);
+}
+
+.theme-dark .date-today {
+  background: #4a2608;
+  color: #fdba74;
+}
+
+.theme-dark .date-saturday {
+  background: #082f49;
+  color: #7dd3fc;
+  border-color: #0e7490;
+}
+
+.theme-dark .date-sunday {
+  background: #4c1020;
+  color: #fda4af;
+  border-color: #be123c;
+}
+
+.theme-dark .date-holiday {
+  background: #b91c1c;
+  color: #ffffff;
+  border-color: #f87171;
+  box-shadow: inset 0 0 0 1px rgba(254, 202, 202, 0.45), 0 8px 18px rgba(185, 28, 28, 0.28);
+}
+
+.calendar-count-badge {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.date-holiday .calendar-count-badge {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.theme-dark .calendar-count-badge {
+  background: #1e3a8a;
+  color: #dbeafe;
+  border-color: #2563eb;
+}
+
+.theme-dark .date-holiday .calendar-count-badge {
+  background: #fee2e2;
+  color: #7f1d1d;
+  border-color: #fecaca;
+}
+
+.calendar-duty-row {
+  background: rgba(255, 255, 255, 0.58);
+  color: #1f2937;
+  --tw-ring-color: rgba(255, 255, 255, 0.5);
+}
+
+.calendar-duty-code {
+  background: rgba(255, 255, 255, 0.72);
+  color: #111827;
+}
+
+.theme-dark .calendar-duty-row {
+  background: rgba(15, 23, 42, 0.48);
+  color: #f8fafc;
+  --tw-ring-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .calendar-duty-code {
+  background: rgba(15, 23, 42, 0.62);
+  color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a,
+[role='button'] {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled='true'] {
+  cursor: not-allowed;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  line-height: 1;
+}
+
+label,
+select,
+option {
+  word-break: keep-all;
+}
+
+.app-control,
+.app-soft,
+.duty-day,
+.duty-evening,
+.duty-mid,
+.duty-night,
+.duty-charge,
+.duty-acting,
+.duty-off,
+.duty-annual,
+.date-today,
+.date-saturday,
+.date-sunday,
+.date-holiday {
+  word-break: keep-all;
+}
+
+.no-vertical-ko {
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.horizontal-text {
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  white-space: nowrap;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
