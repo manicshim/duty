@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT_DIR="/home/manic/wwww/duty"
+ROOT_DIR="/home/manic/www/duty"
 API_DIR="$ROOT_DIR/duty-api"
 WEB_DIR="$ROOT_DIR/duty-web"
 ECOSYSTEM="$API_DIR/ecosystem.config.cjs"
