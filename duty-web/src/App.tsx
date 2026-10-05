@@ -737,7 +737,7 @@ function AuthenticatedApp({ authUser, onLogout }: { authUser: AuthUser; onLogout
   async function upload(event: FormEvent) {
     event.preventDefault();
     if (!file) {
-      setMessage('업로드할 엑셀 파일을 선택하세요.');
+      setMessage('업로드할 근무표 파일을 선택하세요.');
       setUploadStatus('error');
       return;
     }
@@ -2343,9 +2343,9 @@ function UploadPanel({
     <section className="rounded-2xl border app-border app-card p-4 shadow-sm sm:p-5">
       <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-xs font-black uppercase tracking-wide text-blue-500">Excel Import</p>
-          <h3 className="mt-1 text-xl font-black tracking-tight app-text">근무표 엑셀 업로드</h3>
-          <p className="mt-1 text-sm app-muted">Master Lv.4 이상만 등록할 수 있습니다. `.xlsx`, `.xls`, `.csv`를 지원합니다.</p>
+          <p className="text-xs font-black uppercase tracking-wide text-blue-500">Schedule Import</p>
+          <h3 className="mt-1 text-xl font-black tracking-tight app-text">근무표 파일 업로드</h3>
+          <p className="mt-1 text-sm app-muted">Master Lv.4 이상만 등록할 수 있습니다. PNG 이미지와 `.xlsx`, `.xls`, `.csv`를 지원합니다.</p>
         </div>
         <span className="w-fit rounded-full bg-blue-500/10 px-3 py-1 text-xs font-black text-blue-500">Master Lv.4+</span>
       </div>
@@ -2356,13 +2356,13 @@ function UploadPanel({
           onDragOver={(event) => event.preventDefault()}
           onDrop={drop}
         >
-          <input className="sr-only" type="file" accept=".xlsx,.xls,.csv" onChange={(event) => onFileChange(event.target.files?.[0] ?? null)} />
+          <input className="sr-only" type="file" accept=".png,.jpg,.jpeg,.xlsx,.xls,.csv" onChange={(event) => onFileChange(event.target.files?.[0] ?? null)} />
           <span className="flex h-12 w-12 items-center justify-center rounded-2xl app-card text-xs font-black text-blue-500 shadow-sm transition group-hover:scale-105">
-            XLS
+            PNG
           </span>
           <span className="mt-4 text-sm font-black app-text">{file ? file.name : '파일을 드래그하거나 클릭해서 선택'}</span>
           <span className="mt-1 text-xs app-muted">
-            {file ? `${(file.size / 1024).toFixed(1)} KB` : '근무표 날짜 행과 성명 열을 자동 감지합니다.'}
+            {file ? `${(file.size / 1024).toFixed(1)} KB` : '이미지의 날짜·성명·근무코드를 자동 인식합니다.'}
           </span>
         </label>
 

@@ -19,7 +19,7 @@ export class DutyController {
   constructor(private readonly dutyService: DutyService) {}
 
   @Post('upload')
-  @UseInterceptors(FileInterceptor('file'))
+  @UseInterceptors(FileInterceptor('file', { limits: { fileSize: 15 * 1024 * 1024 } }))
   upload(@UploadedFile() file: Express.Multer.File) {
     if (!file) {
       throw new BadRequestException('file 필드는 필수입니다.');

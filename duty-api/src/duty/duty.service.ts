@@ -5,6 +5,7 @@ import { DutyCalendar } from '../entities/duty-calendar.entity';
 import { Member } from '../entities/member.entity';
 import { UploadLog } from '../entities/upload-log.entity';
 import { DutyParserService } from './duty-parser.service';
+import { DutyImageParserService } from './duty-image-parser.service';
 
 @Injectable()
 export class DutyService {
@@ -16,10 +17,13 @@ export class DutyService {
     @InjectRepository(UploadLog)
     private readonly uploadLogRepository: Repository<UploadLog>,
     private readonly parser: DutyParserService,
+    private readonly imageParser: DutyImageParserService,
   ) {}
 
   async uploadExcel(file: Express.Multer.File) {
-    const parsed = this.parser.parse(file.buffer);
+    const parsed = this.imageParser.supports(file)
+      ? await this.imageParser.parse(file.buffer)
+      : this.parser.parse(file.buffer);
     const log = await this.uploadLogRepository.save(
       this.uploadLogRepository.create({
         originalName: file.originalname,
