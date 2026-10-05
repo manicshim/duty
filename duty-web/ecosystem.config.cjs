@@ -9,7 +9,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         PORT: 5050,
-        API_TARGET: 'http://127.0.0.1:3030',
+        API_TARGET: 'http://127.0.0.1:3300',
       },
       watch: false,
       listen_timeout: 10000,

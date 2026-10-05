@@ -1,6 +1,6 @@
 import { DragEvent, FormEvent, TouchEvent, useEffect, useMemo, useRef, useState } from 'react';
 
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3030';
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3300';
 const oauthProviders = ['google', 'naver', 'kakao'] as const;
 
 type ActorRole = 'member' | 'master';

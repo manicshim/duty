@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "nest build",
-    "start": "PORT=3030 nest start",
-    "start:dev": "PORT=3030 nest start --watch",
-    "start:prod": "PORT=3030 node dist/main.js",
+    "start": "PORT=3300 nest start",
+    "start:dev": "PORT=3300 nest start --watch",
+    "start:prod": "PORT=3300 node dist/main.js",
     "pm2:start": "npm run build && pm2 startOrReload ecosystem.config.cjs --update-env",
     "pm2:reload": "npm run build && pm2 reload ecosystem.config.cjs --update-env",
     "pm2:stop": "pm2 stop duty-api",

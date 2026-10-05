@@ -22,7 +22,7 @@ npm install
 npm run dev
 ```
 
-- API: `http://localhost:3030`
+- API: `http://localhost:3300`
 - Web: `http://localhost:5173`
 - MySQL container: `mysql84-duty`
 

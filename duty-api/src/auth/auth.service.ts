@@ -549,7 +549,7 @@ export class AuthService {
   }
 
   private getOAuthRedirectUri(provider: 'google' | 'naver' | 'kakao') {
-    const publicBaseUrl = this.configService.get<string>('OAUTH_PUBLIC_BASE_URL', 'http://localhost:3030');
+    const publicBaseUrl = this.configService.get<string>('OAUTH_PUBLIC_BASE_URL', 'http://localhost:3300');
     return `${publicBaseUrl.replace(/\/$/, '')}/auth/oauth/${provider}/callback`;
   }
 

@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const port = Number(process.env.PORT || 5050);
-const apiTarget = new URL(process.env.API_TARGET || 'http://127.0.0.1:3030');
+const apiTarget = new URL(process.env.API_TARGET || 'http://127.0.0.1:3300');
 const distDir = path.join(__dirname, 'dist');
 
 const contentTypes = {

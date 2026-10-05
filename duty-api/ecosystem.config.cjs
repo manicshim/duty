@@ -8,7 +8,7 @@ module.exports = {
       exec_mode: 'cluster',
       env: {
         NODE_ENV: 'production',
-        PORT: 3030,
+        PORT: 3300,
       },
       watch: false,
       listen_timeout: 10000,
